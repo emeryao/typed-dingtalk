@@ -1,0 +1,7 @@
+{
+    "name": "dingtalk",
+    "main": "dingtalk.d.ts",
+    "homepage": "https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.UDXSDa&treeId=171&articleId=106834&docType=1",
+    "global": true,
+    "version": "2.2.6"
+}

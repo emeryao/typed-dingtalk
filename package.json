@@ -1,0 +1,28 @@
+{
+    "author": "Emeryao",
+    "dependencies": {},
+    "description": "typescript declaration for Dingtalk",
+    "devDependencies": {
+        "@types/node": "^9.6.5",
+        "tslint": "^5.9.1",
+        "typescript": "^2.8.1"
+    },
+    "keywords": [
+        "dingtalk",
+        "dingding",
+        "typed",
+        "types",
+        "typescript"
+    ],
+    "license": "MIT",
+    "main": "dingtalk.d.ts",
+    "name": "typed-dingtalk",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Emeryao/typed-dingtalk.git"
+    },
+    "scripts": {
+        "start": "tsc && node ./dist/app.js"
+    },
+    "version": "2.2.5-beta.1"
+}

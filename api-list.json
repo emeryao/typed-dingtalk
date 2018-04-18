@@ -1,0 +1,568 @@
+{
+    "device": {
+        "notification": {
+            "alert": "弹窗alert",
+            "confirm": "弹窗confirm",
+            "prompt": "弹窗prompt",
+            "vibrate": "震动",
+            "toast": "Toast",
+            "showPreloader": "显示浮层",
+            "hidePreloader": "隐藏浮层",
+            "actionSheet": "ActionSheet控件",
+            "modal": "弹浮层",
+            "extendModal": "弹层，支持多张图片"
+        },
+        "accelerometer": {
+            "watchShake": "启动摇一摇",
+            "clearShake": "停止摇一摇"
+        },
+        "geolocation": {
+            "get": "获取经纬度",
+            "openGps": "打开设置，只有android有效",
+            "start": "开启持续定位",
+            "stop": "关闭持续定位",
+            "status": "批量查询持续定位JS-API状态",
+            "isEnabled": "判断系统是否为钉钉App开启定位权限",
+            "isEnabledHighAccuracy": "是否启用高进度Android定位模式"
+        },
+        "connection": {
+            "getNetworkType": "获取当前网络类型"
+        },
+        "base": {
+            "getUUID": "获取通用唯一识别码（卸载重新安装会改变）",
+            "getInterface": "获取热点接入信息",
+            "getSettings": "获取手机设置（目前只有ios支持）",
+            "getScanWifiList": "获取wifi列表",
+            "getWifiStatus": "获取wifi是否打开",
+            "enableBluetooth": "开启蓝牙",
+            "enableLocation": "开启定位",
+            "startBindDevice": "跳转到硬件绑定页面",
+            "unBindDevice": "硬件解绑",
+            "getScanWifiListAsync": "获取WIFI",
+            "scanBleDevice": "扫描低功耗蓝牙",
+            "stopScanBleDevice": "停止扫描低功耗蓝牙",
+            "connectBleDevice": "连接蓝牙设备",
+            "disConnectBleDevice": "断链蓝牙设备",
+            "sendDataToDevice": "发送蓝牙数据包",
+            "getPhoneInfo": "批量查询持续定位JS-API状态"
+        },
+        "launcher": {
+            "checkInstalledApps": "检测应用是否安装",
+            "launchApp": "启动第三方app"
+        },
+        "audio": {
+            "download": "下载音频",
+            "play": "播放音频",
+            "onPlayEnd": "监听播放音频停止的事件接口",
+            "resume": "暂停之后继续播放音频",
+            "pause": "暂停播放音频",
+            "stop": "停止播放音频",
+            "startRecord": "开始录制音频",
+            "stopRecord": "停止录制音频",
+            "onRecordEnd": "监听录音自动停止",
+            "upload": "上传已录制的音频",
+            "translateVoice": "音频转文字"
+        },
+        "nfc": {
+            "nfcRead": "nfc读取接口",
+            "nfcWrite": "nfc写接口"
+        },
+        "health": {
+            "stepCount": "健康步数",
+            "dayStepCount": "健康每日数据"
+        },
+        "screenshot": {
+            "startMonitor": "配置H5端开始监听客户端截屏事件。 多次调用时，客户端以最后一次调用数据为准",
+            "stopMonitor": "配置H5端停止监听客户端截屏事件"
+        },
+        "screen": {
+            "rotateView": "旋转WebView，并在旋转的同时隐藏导航栏",
+            "resetView": "重置旋转状态，并在恢复导航栏"
+        }
+    },
+    "biz": {
+        "util": {
+            "open": "打开应用内页面",
+            "openLink": "新开页面",
+            "share": "分享",
+            "ut": "上报埋点",
+            "datepicker": "日期选择器",
+            "timepicker": "弹窗alert",
+            "uploadImage": "弹窗alert",
+            "previewImage": "弹窗alert",
+            "qrcode": "弹窗alert",
+            "datetimepicker": "日期时间控件",
+            "chosen": "下拉控件",
+            "scan": "扫码(支持二维码和条形码)",
+            "uploadImageFromCamera": "上传图片",
+            "pageClick": "页面打点",
+            "uploadAttachment": "附件上传",
+            "warn": "报警接口",
+            "multiSelect": "下拉多选",
+            "presentWindow": "打开窗口",
+            "fetchImageData": "在相册中拾取某张图片，对图片数据base64编码后返回给js",
+            "scanCard": "名片扫描",
+            "addDesktopShortcuts": "添加桌面快捷方式",
+            "timestamp": "获取服务器时间",
+            "encrypt": "加密",
+            "decrypt": "解密",
+            "openFloatWindow": "打开浮层窗口",
+            "vip": "vip监控",
+            "recordVideoToUpload": "录制视频进行上传",
+            "fetchFileData": "获取客户端本地文件二进制数据",
+            "stickPage": "将指定链接置顶到钉钉会话首页，点击可快速打开",
+            "selectEmoji": "选择表情",
+            "getLocaleAndNationByCorpId": "通过corpId获取对应企业所在的国家和语言",
+            "shareImage": "分享图片，可传入图片链接，也可由容器自动抓取当前容器内容",
+            "saveImage": "保存图片，可传入图片链接，也可由容器自动抓取当前容器内容",
+            "uploadMedia": "上传视频"
+        },
+        "user": {
+            "get": "获取当前登录用户信息",
+            "secretID": "获取用户登录唯一标识"
+        },
+        "navigation": {
+            "setLeft": "设置导航左侧按钮",
+            "setRight": "设置导航右侧按钮",
+            "setTitle": "弹窗alert",
+            "back": "弹窗alert",
+            "replace": "页面替换",
+            "createEditor": "创建通用组件",
+            "finishEditor": "销毁通用组件",
+            "setIcon": "设置导航icon",
+            "close": "关闭webview",
+            "goBack": "返回上一步",
+            "setMenu": "设置导航左侧按钮",
+            "popGesture": "未知",
+            "gestures": "配置容器相关手势",
+            "setActions": "设置右上角",
+            "hideBar": "JS端控制容器导航栏的显示和隐藏",
+            "setPullGesture": "设置当前页面(容器实例)是否支持设置收纳到缩略图功能",
+            "showPopdownList": "navigationBar展示下拉列表",
+            "setSubtitle": "navigationBar 小标题",
+            "setTitleIcon": "在标题旁边设置一个icon"
+        },
+        "ding": {
+            "post": "发钉",
+            "create": "打开DING、任务、会议界面"
+        },
+        "telephone": {
+            "call": "打电话",
+            "showCallMenu": "打电话选择面板",
+            "quickCall": "快速选择发起办公电话还是普通电话(以后按需扩展)",
+            "callOrgExternalContacts": "企业员工拨打企业外部联系人电话",
+            "quickCallList": "拨打单人电话选项（可定制）",
+            "checkBizCall": "检查某个corpId下的办公电话是否开通"
+        },
+        "chat": {
+            "chooseConversation": "选会话",
+            "open": "打开会话",
+            "getConversationInfo": "查询会话信息",
+            "pickConversation": "选群组",
+            "chooseConversationByCorpId": "选择企业会话",
+            "toConversation": "跳转会话",
+            "locationChatMessage": "未知",
+            "openSingleChat": "打开某个用户的聊天页面，如果没有，创建会话",
+            "addGroup": "自己加入一个公开群",
+            "createOrgPublicGroup": "跳转到创建群群中间页让用户创建某个企业的公开群",
+            "modifyGroupDesc": "跳转到群简介修改界面修改某个群的群简介"
+        },
+        "contact": {
+            "createGroup": "创建群",
+            "choose": "修改企业通讯录选人",
+            "complexChoose": "企业通讯录同时选人，选部门",
+            "getMobileContact": "查询手机联系人",
+            "changeCustomerFollower": "企业通讯录选人，加入微应用权限过滤",
+            "complexPicker": "选人",
+            "pickCustomer": "选择客户",
+            "setRule": "设置规则",
+            "departmentsPicker": "选部门",
+            "externalComplexPicker": "选外部通信录",
+            "addFromManual": "选企业通信录的人",
+            "addFromContact": "选手机联系人",
+            "externalEditForm": "编辑联系人",
+            "addUserForm": "添加联系人",
+            "chooseMobileContacts": "选择手机联系人",
+            "manageContactAlert": "管理获取通信录弹窗",
+            "complexSelectedPicker": "跳转到已选成员组件",
+            "departmentsSelectedPicker": "跳转到已选部门组件",
+            "pickJobTitle": "选择职务",
+            "isForeignOrg": "判断corpId对应的企业是否是海外企业",
+            "addSubManager": "跳转到添加子管理员界面"
+        },
+        "map": {
+            "search": "地图搜索",
+            "locate": "地图定位",
+            "view": "查看定位",
+            "searchRoute": "查询路线"
+        },
+        "customContact": {
+            "choose": "自定义选人组件",
+            "multipleChoose": "自定义选人组件（多选）"
+        },
+        "cspace": {
+            "preview": "附件预览",
+            "saveFile": "转存附件",
+            "chooseSpaceDir": "唤起钉盘选择器",
+            "copy": "将钉盘系统内文件拷贝到钉盘内指定位置"
+        },
+        "clipboardData": {
+            "setData": "添加到黏贴板"
+        },
+        "intent": {
+            "fetchData": "选择图片"
+        },
+        "notify": {
+            "send": "消息通知H5到Native"
+        },
+        "alipay": {
+            "pay": "支付宝移动支付SDK，订单支付JS-API封装",
+            "auth": "支付宝移动支付SDK，授权JS-API封装"
+        },
+        "auth": {
+            "requestAuthCode": "JS免登"
+        },
+        "redenvelop": {
+            "sendNormalRedEnvelop": "x",
+            "sendEnterpriseRedEnvelop": "x"
+        },
+        "data": {
+            "getAvatar": "获取头像URL"
+        },
+        "microApp": {
+            "visualList": "获取当前用户可见的企业开通的微应用信息"
+        },
+        "calendar": {
+            "chooseOneDay": "唤起月历组件，选择某天",
+            "chooseHalfDay": "唤起月历组件，并选择其中半天",
+            "chooseInterval": "唤起月历组件，并选择日期区间，并以“天”为维度",
+            "chooseDateTime": "唤起月历组件，并选择其中某具体时间(精度到分钟)",
+            "datePicker": "Calendar组件"
+        },
+        "verify": {
+            "takePhoto": "拍摄身份证正反面",
+            "biometric": "活体识别，识别后返回识别结果图片"
+        },
+        "faceBox": {
+            "startCameraRecord": "唤起人脸录入界面",
+            "startPictureRecord": "唤起图片选择界面然后检测人脸",
+            "removeFace": "删除已录入的人脸接口",
+            "getRecognition": "获取当前设备模式",
+            "setRecognition": "设置当前设备模式",
+            "showRemind": "提醒用户录入人脸",
+            "sendMessageToContact": " 发送消息",
+            "experienceFunction": "体验功能",
+            "startCameraRecordFromPartner": "唤起人脸录入界面"
+        },
+        "oa": {
+            "setWorkTab": "配置用户用户企业工作台，设置自定义title和自定义主页链接，仅对管理员开放，如果当前用户不是设置企业的管理员，则报错",
+            "authorityVerify": "校验页面是否有权限设置工作首页链接"
+        },
+        "live": {
+            "listLiveRecords": "获取录播列表",
+            "getLiveStatistics": "获取录播统计信息",
+            "listLiveViewers": "获取观众列表",
+            "nav2GroupAnchorList": "跳转群主播列表页面",
+            "nav2PlayVideo": "跳转至播放页面",
+            "showPlayer": "展示直播播放器",
+            "destroyPlayer": "销毁播放器",
+            "initPlayer": "初始化直播播放器",
+            "playerPlay": "直播播放器播放",
+            "playerPause": "直播播放器暂停",
+            "hidePlayer": "隐藏直播播放器"
+        },
+        "zoloz": {
+            "zimIdentity": "启动生物识别认证接口",
+            "download": "下载算法模型"
+        },
+        "schedule": {
+            "create": "创建日程"
+        }
+    },
+    "ui": {
+        "input": {
+            "plain": "输入框（单行）"
+        },
+        "progressBar": {
+            "setColors": "设置顶部进度条颜色"
+        },
+        "pullToRefresh": {
+            "enable": "启用下拉刷新功能",
+            "stop": "收起下拉刷新控件",
+            "disable": "禁用下拉刷新功能"
+        },
+        "webViewBounce": {
+            "enable": "启用webview下拉弹性效果",
+            "disable": "禁用webview下拉弹性效果"
+        },
+        "nav": {
+            "preload": "",
+            "go": "",
+            "recycle": "",
+            "push": "往路径堆栈中push路径",
+            "pop": "路径堆栈中删除view 路径",
+            "quit": "",
+            "close": "",
+            "getCurrentId": ""
+        },
+        "drawer": {
+            "init": "",
+            "config": "",
+            "enable": "",
+            "disable": "",
+            "open": "",
+            "close": ""
+        },
+        "tab": {
+            "init": "初始化tab",
+            "start": "唤起tab",
+            "config": "配置tab",
+            "select": "tab选择",
+            "add": "增加tab",
+            "remove": "移除tab"
+        },
+        "appLink": {
+            "open": "应用跳转",
+            "request": "发送消息",
+            "response": "返回消息",
+            "fetch": "获取请求页面（sourceApp）的数据"
+        }
+    },
+    "runtime": {
+        "info": {
+            "status": "获取当前容器状态"
+        },
+        "permission": {
+            "requestAuthCode": "请求授权码，免登改造用",
+            "requestJsApis": "权限校验jsapi，隐藏方法，只限sdk内部调用",
+            "requestOperateAuthCode": ""
+        },
+        "message": {
+            "post": "",
+            "fetch": ""
+        },
+        "monitor": {
+            "usability": "可用性上报",
+            "enableUsability": "开启可用性监控",
+            "finishLoad": "H5端通知客户端业务加载成功，客户端返回用户操作触发容器加载的时间"
+        }
+    },
+    "internal": {
+        "lwp": {
+            "call": "lwp接口(目前只有套件使用)",
+            "setSessionIdCookie": "将lwp sessionId种到cookie"
+        },
+        "microapp": {
+            "checkInstalled": "检测微应用是否安装",
+            "queryInfo": "批量获取微应用信息",
+            "triggerSync": "触发cloudsetting数据同步，进而更新配置中心(oa_user)数据"
+        },
+        "user": {
+            "getRole": "获取角色",
+            "isNewUser": "是否是新用户",
+            "allOrganizations": "获取自己所在的所有企业基本信息",
+            "showMedalEntry": "是否显示勋章入口"
+        },
+        "request": {
+            "lwp": "lwp通道",
+            "getSecurityToken": "获取securityToken",
+            "httpOverLWP": "http转lwp"
+        },
+        "util": {
+            "encryData": "参数加密生成key",
+            "getCorpIdByOrgId": "orgId换corpId",
+            "getOrgIdByCorpId": "corpId换orgId",
+            "isSimulator": "模拟器",
+            "getWua": "人机识别",
+            "chooseIndustry": "选择行业组件",
+            "chooseRegion": "选择地区",
+            "collectCell": "安卓收集打卡瞬间用户周围的基站情况",
+            "showAddExternalContactDialog": "唤起添加外部联系人组件",
+            "getBindSmartDeviceOrgList": "获取绑定了智能设备的企业列表",
+            "authAlipayInvoice": "唤起支付宝, 获取授权auto_code"
+        },
+        "log": {
+            "upload": "上报日志到服务端",
+            "add": "日志写入到客户端",
+            "uploadException": "上报异常日志到服务端",
+            "searchQueryLog": "搜索Querylog通过魔兔上传",
+            "searchClickLog": "搜索Clicklog通过魔兔上传"
+        },
+        "hpm": {
+            "get": "获取hpm配置信息（暂未开发）",
+            "update": "更新hpm",
+            "queryInfo": "hpm查询",
+            "delete": "hpm删除"
+        },
+        "phoneContact": {
+            "add": "添加号码到手机通信录"
+        },
+        "pageLink": {
+            "request": "发送消息",
+            "response": "返回消息",
+            "fetch": "获取请求页面（sourceApp）的数据"
+        },
+        "notify": {
+            "send": "消息通知H5到Native",
+            "add": "添加消息",
+            "showModal": "全屏浮层弹框，全屏遮罩",
+            "closeModal": "关闭全屏浮层弹框，全屏遮罩"
+        },
+        "schema": {
+            "open": "内部页面跳转",
+            "openWifiSetting": "跳转到wifi设置（Android）"
+        },
+        "contact": {
+            "chooseMobileContact": "手机通讯录选人（单选）",
+            "chooseOrgAddress": "打开对应企业的位置列表，提供位置选择的功能",
+            "internalComplexPicker": "企业主页选人组件"
+        },
+        "beacon": {
+            "detectBeacons": "beacon",
+            "detectStart": "detectStart",
+            "detectStop": "detectStop",
+            "bind": "beancon绑定"
+        },
+        "host": {
+            "lwp": "离线托管的lwp请求",
+            "query": "查询离线托管任务",
+            "cancel": "取消离线托管任务"
+        },
+        "createOrg": {
+            "industryInfo": "获取创建团队之后的行业信息",
+            "successJump": "创建团队之后跳转",
+            "lastCreateOrgInfo": "获取最近创建的团队信息"
+        },
+        "attend": {
+            "assistant": "上班助手"
+        },
+        "certify": {
+            "step": "查询活体认证状态",
+            "biometric": "调用活体拍照",
+            "takePhoto": "拍照",
+            "submit": "上班助手"
+        },
+        "channel": {
+            "infoExist": "检查客户端上服务窗是否已开通",
+            "openPage": "打开指定企业服务窗相关页面"
+        },
+        "auth": {
+            "postLoginTempCode": "向客户端POST登录临时授权码(灰度)"
+        },
+        "chat": {
+            "pickGroupConversation": "获取群会话",
+            "openConversation": "内部H5打开指定的单聊会话，并可以附带一条消息",
+            "selectAndSendText": "调用选会话组件并发送@人文字消息",
+            "transmitMsg": "将部分信息传递到IM会话，以link类型消息发送",
+            "sendMultiMsges": "供钉钉自有H5业务批量发送消息"
+        },
+        "health": {
+            "getTodaysStepCount": "获取用户当天0：00至当前时间的总步数",
+            "enableStepCountSync": "开启步数同步功能（步数：用户当天0：00至当前时间的总步数），并立即上传一次",
+            "disableStepCountSync": "关闭 步数同步功能"
+        },
+        "enterpriseEncryption": {
+            "info": "企业密钥说明页面获取企业信息",
+            "sendMessageToMaster": " 企业密钥说明页面通知主管理员",
+            "turnOnWithAnimation": "企业密钥开通并展示开通动画"
+        },
+        "faceScan": {
+            "prepareScan": "人脸识别准备，成功后再调用scan",
+            "scan": "人脸识别"
+        },
+        "ATMBle": {
+            "startMonitor": "考勤蓝牙开始监控",
+            "stopMonitor": "蓝牙停止监控",
+            "checkIn": "智能考勤机打卡"
+        },
+        "dingCard": {
+            "bindWorkMobile": "绑定工作号",
+            "unbindWorkMobile": "解绑工作号"
+        },
+        "facialRecognition": {
+            "detectFace": "人脸的识别"
+        },
+        "alpha": {
+            "getDevicePwd": "获取设备上网密码",
+            "addWdsDevice": "获取设备上网密码",
+            "copyPwd": "显示自己的Alpha上网密码"
+        },
+        "search": {
+            "debug": "搜索调试"
+        },
+        "guide": {
+            "closeGuideBanner": "关闭蓝条引导"
+        },
+        "cspace": {
+            "decryptAndUpload": "客户端下载钉盘文件，本地解密，并上传到个人临时空间",
+            "cancelDecryptAndUpload": "取消（下载、解密、上传）的过程",
+            "openFolder": "进入钉盘指定目录"
+        },
+        "safe": {
+            "getAppInfo": "获取App信息",
+            "getDeviceInfo": "获取设备相关信息",
+            "scanPlugin": "iOS 越狱插件行为扫描"
+        },
+        "redpacket": {
+            "nav2RedPacket": "红包组件"
+        }
+    },
+    "util": {
+        "localStorage": {
+            "getItem": "本地存储读",
+            "setItem": "本地存储写",
+            "removeItem": "本地存储移除操作"
+        },
+        "domainStorage": {
+            "getItem": "本地存储（区分域名）读",
+            "setItem": "本地存储（区分域名）写",
+            "removeItem": "本地存储（区分域名）删除",
+            "clearItems": "本地存储（区分域名）清空",
+            "listItems": "获取当前域名下，所有存储在本地的数据key以及长度信息"
+        },
+        "cookies": {
+            "write": "将指定cookie保存到本地cookiestorage",
+            "read": "读取本地cookiestorage中在指定域名下的cookie"
+        }
+    },
+    "preRelease": {
+        "appLink": {
+            "open": "应用跳转",
+            "request": "发送消息",
+            "response": "返回消息",
+            "fetch": "获取请求页面（sourceApp）的数据"
+        }
+    },
+    "channel": {
+        "permission": {
+            "requestAuthCode": "服务窗请求授权码，免登改造用"
+        },
+        "open": {
+            "profile": "服务窗打开个人profile页面"
+        }
+    },
+    "net": {
+        "vpn": {
+            "check": "检查深信服vpn是否连接",
+            "start": "启动深信服vpn",
+            "stop": "关闭深信服vpn"
+        },
+        "tunnel": {
+            "request": "设客户端提供代理，来发送https请求"
+        }
+    },
+    "service": {
+        "request": {
+            "httpOverLwp": "安全通道网络请求",
+            "mtop": "钉钉代理mtop请求"
+        }
+    },
+    "retail": {
+        "chat": {
+            "open": "在新零售场景，打开会话"
+        },
+        "telephone": {
+            "call": "新增JSAPI, 在新零售场景，直接发起办公电话"
+        }
+    }
+}
