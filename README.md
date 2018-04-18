@@ -3,6 +3,8 @@
 
 [![NPM](https://nodei.co/npm/typed-dingtalk.png?downloads=true&stars=true)](https://nodei.co/npm/typed-dingtalk/)
 
+[![CircleCI](https://circleci.com/gh/Emeryao/typed-dingtalk.svg?style=svg)](https://circleci.com/gh/Emeryao/typed-dingtalk)
+
 ## Install
 
 * With [`npm`](https://www.npmjs.com/) installed  
