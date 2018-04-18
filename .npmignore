@@ -3,3 +3,5 @@ src
 tsconfig.json
 tslint.json
 typings.json
+api-list-plain.json
+api-list.json
