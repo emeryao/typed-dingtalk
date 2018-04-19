@@ -40,9 +40,9 @@ declare namespace Dingtalk {
         ui: Ui;
         runtime: Runtime;
         internal: Internal;
-        util: Util3;
+        util: Util;
         preRelease: PreRelease;
-        channel: Channel2;
+        channel: Channel;
         net: Net;
         service: Service;
         retail: Retail;
@@ -50,23 +50,23 @@ declare namespace Dingtalk {
     }
 
     interface Retail {
-        chat: Chat3;
-        telephone: Telephone2;
+        chat: RetailChat;
+        telephone: RetailTelephone;
     }
 
-    interface Telephone2 {
+    interface RetailTelephone {
         call(callback: CallbackParam): void;
     }
 
-    interface Chat3 {
+    interface RetailChat {
         open(callback: CallbackParam): void;
     }
 
     interface Service {
-        request: Request2;
+        request: Request;
     }
 
-    interface Request2 {
+    interface Request {
         httpOverLwp(callback: CallbackParam): void;
         mtop(callback: CallbackParam): void;
     }
@@ -86,7 +86,7 @@ declare namespace Dingtalk {
         stop(callback: CallbackParam): void;
     }
 
-    interface Channel2 {
+    interface Channel {
         permission: Auth;
         open: Open;
     }
@@ -99,7 +99,7 @@ declare namespace Dingtalk {
         appLink: AppLink;
     }
 
-    interface Util3 {
+    interface Util {
         localStorage: LocalStorage;
         domainStorage: DomainStorage;
         cookies: Cookies;
@@ -127,25 +127,25 @@ declare namespace Dingtalk {
     interface Internal {
         lwp: Lwp;
         microapp: Microapp;
-        user: User2;
-        request: Request;
-        util: Util2;
+        user: InternalUser;
+        request: InternalRequest;
+        util: InternalUtil;
         log: Log;
         hpm: Hpm;
         phoneContact: PhoneContact;
         pageLink: PageLink;
-        notify: Notify2;
+        notify: InternalNotify;
         schema: Schema;
-        contact: Contact2;
+        contact: InternalContact;
         beacon: Beacon;
         host: Host;
         createOrg: CreateOrg;
         attend: Attend;
         certify: Certify;
-        channel: Channel;
-        auth: Auth2;
-        chat: Chat2;
-        health: Health2;
+        channel: InternalChannel;
+        auth: InternalAuth;
+        chat: InternalChat;
+        health: InternalHealth;
         enterpriseEncryption: EnterpriseEncryption;
         faceScan: FaceScan;
         ATMBle: ATMBle;
@@ -154,7 +154,7 @@ declare namespace Dingtalk {
         alpha: Alpha;
         search: Search;
         guide: Guide;
-        cspace: Cspace2;
+        cspace: InternalCspace;
         safe: Safe;
         redpacket: Redpacket;
     }
@@ -169,7 +169,7 @@ declare namespace Dingtalk {
         scanPlugin(callback: CallbackParam): void;
     }
 
-    interface Cspace2 {
+    interface InternalCspace {
         decryptAndUpload(callback: CallbackParam): void;
         cancelDecryptAndUpload(callback: CallbackParam): void;
         openFolder(callback: CallbackParam): void;
@@ -215,13 +215,13 @@ declare namespace Dingtalk {
         turnOnWithAnimation(callback: CallbackParam): void;
     }
 
-    interface Health2 {
+    interface InternalHealth {
         getTodaysStepCount(callback: CallbackParam): void;
         enableStepCountSync(callback: CallbackParam): void;
         disableStepCountSync(callback: CallbackParam): void;
     }
 
-    interface Chat2 {
+    interface InternalChat {
         pickGroupConversation(callback: CallbackParam): void;
         openConversation(callback: CallbackParam): void;
         selectAndSendText(callback: CallbackParam): void;
@@ -229,11 +229,11 @@ declare namespace Dingtalk {
         sendMultiMsges(callback: CallbackParam): void;
     }
 
-    interface Auth2 {
+    interface InternalAuth {
         postLoginTempCode(callback: CallbackParam): void;
     }
 
-    interface Channel {
+    interface InternalChannel {
         infoExist(callback: CallbackParam): void;
         openPage(callback: CallbackParam): void;
     }
@@ -268,7 +268,7 @@ declare namespace Dingtalk {
         bind(callback: CallbackParam): void;
     }
 
-    interface Contact2 {
+    interface InternalContact {
         chooseMobileContact(callback: CallbackParam): void;
         chooseOrgAddress(callback: CallbackParam): void;
         internalComplexPicker(callback: CallbackParam): void;
@@ -279,7 +279,7 @@ declare namespace Dingtalk {
         openWifiSetting(callback: CallbackParam): void;
     }
 
-    interface Notify2 {
+    interface InternalNotify {
         send(callback: CallbackParam): void;
         add(callback: CallbackParam): void;
         showModal(callback: CallbackParam): void;
@@ -311,7 +311,7 @@ declare namespace Dingtalk {
         searchClickLog(callback: CallbackParam): void;
     }
 
-    interface Util2 {
+    interface InternalUtil {
         encryData(callback: CallbackParam): void;
         getCorpIdByOrgId(callback: CallbackParam): void;
         getOrgIdByCorpId(callback: CallbackParam): void;
@@ -325,13 +325,13 @@ declare namespace Dingtalk {
         authAlipayInvoice(callback: CallbackParam): void;
     }
 
-    interface Request {
+    interface InternalRequest {
         lwp(callback: CallbackParam): void;
         getSecurityToken(callback: CallbackParam): void;
         httpOverLWP(callback: CallbackParam): void;
     }
 
-    interface User2 {
+    interface InternalUser {
         getRole(callback: CallbackParam): void;
         isNewUser(callback: CallbackParam): void;
         allOrganizations(callback: CallbackParam): void;
@@ -444,12 +444,12 @@ declare namespace Dingtalk {
     }
 
     interface Biz {
-        util: Util;
+        util: BizUtil;
         user: User;
         navigation: Navigation;
         ding: Ding;
-        telephone: Telephone;
-        chat: Chat;
+        telephone: BizTelephone;
+        chat: BizChat;
         contact: Contact;
         map: Map;
         customContact: CustomContact;
@@ -601,7 +601,7 @@ declare namespace Dingtalk {
         addSubManager(callback: CallbackParam): void;
     }
 
-    interface Chat {
+    interface BizChat {
         chooseConversation(callback: CallbackParam): void;
         open(callback: CallbackParam): void;
         getConversationInfo(callback: CallbackParam): void;
@@ -615,7 +615,7 @@ declare namespace Dingtalk {
         modifyGroupDesc(callback: CallbackParam): void;
     }
 
-    interface Telephone {
+    interface BizTelephone {
         call(callback: CallbackParam): void;
         showCallMenu(callback: CallbackParam): void;
         quickCall(callback: CallbackParam): void;
@@ -656,7 +656,7 @@ declare namespace Dingtalk {
         secretID(callback: CallbackParam): void;
     }
 
-    interface Util {
+    interface BizUtil {
         open(callback: CallbackParam): void;
         openLink(callback: CallbackParam): void;
         share(callback: CallbackParam): void;
