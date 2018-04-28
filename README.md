@@ -22,8 +22,15 @@
 * Or get the declaration file [here](./dingtalk.d.ts) and include it to your project
 
 ## About
-Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.q6PDir&treeId=171&articleId=106834&docType=1)   
+Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.q6PDir&treeId=171&articleId=106834&docType=1)  
 [`dingtalk.js`](https://g.alicdn.com/dingding/open-develop/2.2.5/dingtalk.js) Version `2.2.5`
 
+### About the jsdoc comment
+* all Chinese punctuations in comments are removed
+* a comment quoted by `"` means it is directly copy/paste from the official documentaion
+* a comment quoted by `'` means it is copied from the official documentation and had been modified
+    > a common scenario is removing some useless messages like `"the type is number blablabla"`
+* a comment has no quotes means it is written by myself
+
 ## Last Update
-`2018.04.18`
+`2018.04.28`

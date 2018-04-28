@@ -6,7 +6,7 @@ declare namespace Dingtalk {
         /**成功回调 */
         onSuccess?: Function;
         /**失败回调 */
-        onFail?: Function;
+        onFail?: (error?: any) => void;
         /**取消回调 */
         onCancel?: Function;
     }
@@ -34,7 +34,7 @@ declare namespace Dingtalk {
         /**处理成功验证 */
         ready(callback: Function): void;
         /**处理失败验证 */
-        error(callback: (error) => void): void;
+        error(callback: (error: any) => void): void;
         device: Device;
         biz: Biz;
         ui: Ui;
@@ -55,11 +55,11 @@ declare namespace Dingtalk {
     }
 
     interface RetailTelephone {
-        call(callback: CallbackParam): void;
+        call(param: CallbackParam): void;
     }
 
     interface RetailChat {
-        open(callback: CallbackParam): void;
+        open(param: CallbackParam): void;
     }
 
     interface Service {
@@ -67,8 +67,8 @@ declare namespace Dingtalk {
     }
 
     interface Request {
-        httpOverLwp(callback: CallbackParam): void;
-        mtop(callback: CallbackParam): void;
+        httpOverLwp(param: CallbackParam): void;
+        mtop(param: CallbackParam): void;
     }
 
     interface Net {
@@ -77,13 +77,13 @@ declare namespace Dingtalk {
     }
 
     interface Tunnel {
-        request(callback: CallbackParam): void;
+        request(param: CallbackParam): void;
     }
 
     interface Vpn {
-        check(callback: CallbackParam): void;
-        start(callback: CallbackParam): void;
-        stop(callback: CallbackParam): void;
+        check(param: CallbackParam): void;
+        start(param: CallbackParam): void;
+        stop(param: CallbackParam): void;
     }
 
     interface Channel {
@@ -92,7 +92,7 @@ declare namespace Dingtalk {
     }
 
     interface Open {
-        profile(callback: CallbackParam): void;
+        profile(param: CallbackParam): void;
     }
 
     interface PreRelease {
@@ -106,22 +106,22 @@ declare namespace Dingtalk {
     }
 
     interface Cookies {
-        write(callback: CallbackParam): void;
-        read(callback: CallbackParam): void;
+        write(param: CallbackParam): void;
+        read(param: CallbackParam): void;
     }
 
     interface DomainStorage {
-        getItem(callback: CallbackParam): void;
-        setItem(callback: CallbackParam): void;
-        removeItem(callback: CallbackParam): void;
-        clearItems(callback: CallbackParam): void;
-        listItems(callback: CallbackParam): void;
+        getItem(param: CallbackParam): void;
+        setItem(param: CallbackParam): void;
+        removeItem(param: CallbackParam): void;
+        clearItems(param: CallbackParam): void;
+        listItems(param: CallbackParam): void;
     }
 
     interface LocalStorage {
-        getItem(callback: CallbackParam): void;
-        setItem(callback: CallbackParam): void;
-        removeItem(callback: CallbackParam): void;
+        getItem(param: CallbackParam): void;
+        setItem(param: CallbackParam): void;
+        removeItem(param: CallbackParam): void;
     }
 
     interface Internal {
@@ -160,193 +160,193 @@ declare namespace Dingtalk {
     }
 
     interface Redpacket {
-        nav2RedPacket(callback: CallbackParam): void;
+        nav2RedPacket(param: CallbackParam): void;
     }
 
     interface Safe {
-        getAppInfo(callback: CallbackParam): void;
-        getDeviceInfo(callback: CallbackParam): void;
-        scanPlugin(callback: CallbackParam): void;
+        getAppInfo(param: CallbackParam): void;
+        getDeviceInfo(param: CallbackParam): void;
+        scanPlugin(param: CallbackParam): void;
     }
 
     interface InternalCspace {
-        decryptAndUpload(callback: CallbackParam): void;
-        cancelDecryptAndUpload(callback: CallbackParam): void;
-        openFolder(callback: CallbackParam): void;
+        decryptAndUpload(param: CallbackParam): void;
+        cancelDecryptAndUpload(param: CallbackParam): void;
+        openFolder(param: CallbackParam): void;
     }
 
     interface Guide {
-        closeGuideBanner(callback: CallbackParam): void;
+        closeGuideBanner(param: CallbackParam): void;
     }
 
     interface Search {
-        debug(callback: CallbackParam): void;
+        debug(param: CallbackParam): void;
     }
 
     interface Alpha {
-        getDevicePwd(callback: CallbackParam): void;
-        addWdsDevice(callback: CallbackParam): void;
-        copyPwd(callback: CallbackParam): void;
+        getDevicePwd(param: CallbackParam): void;
+        addWdsDevice(param: CallbackParam): void;
+        copyPwd(param: CallbackParam): void;
     }
 
     interface FacialRecognition {
-        detectFace(callback: CallbackParam): void;
+        detectFace(param: CallbackParam): void;
     }
 
     interface DingCard {
-        bindWorkMobile(callback: CallbackParam): void;
-        unbindWorkMobile(callback: CallbackParam): void;
+        bindWorkMobile(param: CallbackParam): void;
+        unbindWorkMobile(param: CallbackParam): void;
     }
 
     interface ATMBle {
-        startMonitor(callback: CallbackParam): void;
-        stopMonitor(callback: CallbackParam): void;
-        checkIn(callback: CallbackParam): void;
+        startMonitor(param: CallbackParam): void;
+        stopMonitor(param: CallbackParam): void;
+        checkIn(param: CallbackParam): void;
     }
 
     interface FaceScan {
-        prepareScan(callback: CallbackParam): void;
-        scan(callback: CallbackParam): void;
+        prepareScan(param: CallbackParam): void;
+        scan(param: CallbackParam): void;
     }
 
     interface EnterpriseEncryption {
-        info(callback: CallbackParam): void;
-        sendMessageToMaster(callback: CallbackParam): void;
-        turnOnWithAnimation(callback: CallbackParam): void;
+        info(param: CallbackParam): void;
+        sendMessageToMaster(param: CallbackParam): void;
+        turnOnWithAnimation(param: CallbackParam): void;
     }
 
     interface InternalHealth {
-        getTodaysStepCount(callback: CallbackParam): void;
-        enableStepCountSync(callback: CallbackParam): void;
-        disableStepCountSync(callback: CallbackParam): void;
+        getTodaysStepCount(param: CallbackParam): void;
+        enableStepCountSync(param: CallbackParam): void;
+        disableStepCountSync(param: CallbackParam): void;
     }
 
     interface InternalChat {
-        pickGroupConversation(callback: CallbackParam): void;
-        openConversation(callback: CallbackParam): void;
-        selectAndSendText(callback: CallbackParam): void;
-        transmitMsg(callback: CallbackParam): void;
-        sendMultiMsges(callback: CallbackParam): void;
+        pickGroupConversation(param: CallbackParam): void;
+        openConversation(param: CallbackParam): void;
+        selectAndSendText(param: CallbackParam): void;
+        transmitMsg(param: CallbackParam): void;
+        sendMultiMsges(param: CallbackParam): void;
     }
 
     interface InternalAuth {
-        postLoginTempCode(callback: CallbackParam): void;
+        postLoginTempCode(param: CallbackParam): void;
     }
 
     interface InternalChannel {
-        infoExist(callback: CallbackParam): void;
-        openPage(callback: CallbackParam): void;
+        infoExist(param: CallbackParam): void;
+        openPage(param: CallbackParam): void;
     }
 
     interface Certify {
-        step(callback: CallbackParam): void;
-        biometric(callback: CallbackParam): void;
-        takePhoto(callback: CallbackParam): void;
-        submit(callback: CallbackParam): void;
+        step(param: CallbackParam): void;
+        biometric(param: CallbackParam): void;
+        takePhoto(param: CallbackParam): void;
+        submit(param: CallbackParam): void;
     }
 
     interface Attend {
-        assistant(callback: CallbackParam): void;
+        assistant(param: CallbackParam): void;
     }
 
     interface CreateOrg {
-        industryInfo(callback: CallbackParam): void;
-        successJump(callback: CallbackParam): void;
-        lastCreateOrgInfo(callback: CallbackParam): void;
+        industryInfo(param: CallbackParam): void;
+        successJump(param: CallbackParam): void;
+        lastCreateOrgInfo(param: CallbackParam): void;
     }
 
     interface Host {
-        lwp(callback: CallbackParam): void;
-        query(callback: CallbackParam): void;
-        cancel(callback: CallbackParam): void;
+        lwp(param: CallbackParam): void;
+        query(param: CallbackParam): void;
+        cancel(param: CallbackParam): void;
     }
 
     interface Beacon {
-        detectBeacons(callback: CallbackParam): void;
-        detectStart(callback: CallbackParam): void;
-        detectStop(callback: CallbackParam): void;
-        bind(callback: CallbackParam): void;
+        detectBeacons(param: CallbackParam): void;
+        detectStart(param: CallbackParam): void;
+        detectStop(param: CallbackParam): void;
+        bind(param: CallbackParam): void;
     }
 
     interface InternalContact {
-        chooseMobileContact(callback: CallbackParam): void;
-        chooseOrgAddress(callback: CallbackParam): void;
-        internalComplexPicker(callback: CallbackParam): void;
+        chooseMobileContact(param: CallbackParam): void;
+        chooseOrgAddress(param: CallbackParam): void;
+        internalComplexPicker(param: CallbackParam): void;
     }
 
     interface Schema {
-        open(callback: CallbackParam): void;
-        openWifiSetting(callback: CallbackParam): void;
+        open(param: CallbackParam): void;
+        openWifiSetting(param: CallbackParam): void;
     }
 
     interface InternalNotify {
-        send(callback: CallbackParam): void;
-        add(callback: CallbackParam): void;
-        showModal(callback: CallbackParam): void;
-        closeModal(callback: CallbackParam): void;
+        send(param: CallbackParam): void;
+        add(param: CallbackParam): void;
+        showModal(param: CallbackParam): void;
+        closeModal(param: CallbackParam): void;
     }
 
     interface PageLink {
-        request(callback: CallbackParam): void;
-        response(callback: CallbackParam): void;
-        fetch(callback: CallbackParam): void;
+        request(param: CallbackParam): void;
+        response(param: CallbackParam): void;
+        fetch(param: CallbackParam): void;
     }
 
     interface PhoneContact {
-        add(callback: CallbackParam): void;
+        add(param: CallbackParam): void;
     }
 
     interface Hpm {
-        get(callback: CallbackParam): void;
-        update(callback: CallbackParam): void;
-        queryInfo(callback: CallbackParam): void;
-        delete(callback: CallbackParam): void;
+        get(param: CallbackParam): void;
+        update(param: CallbackParam): void;
+        queryInfo(param: CallbackParam): void;
+        delete(param: CallbackParam): void;
     }
 
     interface Log {
-        upload(callback: CallbackParam): void;
-        add(callback: CallbackParam): void;
-        uploadException(callback: CallbackParam): void;
-        searchQueryLog(callback: CallbackParam): void;
-        searchClickLog(callback: CallbackParam): void;
+        upload(param: CallbackParam): void;
+        add(param: CallbackParam): void;
+        uploadException(param: CallbackParam): void;
+        searchQueryLog(param: CallbackParam): void;
+        searchClickLog(param: CallbackParam): void;
     }
 
     interface InternalUtil {
-        encryData(callback: CallbackParam): void;
-        getCorpIdByOrgId(callback: CallbackParam): void;
-        getOrgIdByCorpId(callback: CallbackParam): void;
-        isSimulator(callback: CallbackParam): void;
-        getWua(callback: CallbackParam): void;
-        chooseIndustry(callback: CallbackParam): void;
-        chooseRegion(callback: CallbackParam): void;
-        collectCell(callback: CallbackParam): void;
-        showAddExternalContactDialog(callback: CallbackParam): void;
-        getBindSmartDeviceOrgList(callback: CallbackParam): void;
-        authAlipayInvoice(callback: CallbackParam): void;
+        encryData(param: CallbackParam): void;
+        getCorpIdByOrgId(param: CallbackParam): void;
+        getOrgIdByCorpId(param: CallbackParam): void;
+        isSimulator(param: CallbackParam): void;
+        getWua(param: CallbackParam): void;
+        chooseIndustry(param: CallbackParam): void;
+        chooseRegion(param: CallbackParam): void;
+        collectCell(param: CallbackParam): void;
+        showAddExternalContactDialog(param: CallbackParam): void;
+        getBindSmartDeviceOrgList(param: CallbackParam): void;
+        authAlipayInvoice(param: CallbackParam): void;
     }
 
     interface InternalRequest {
-        lwp(callback: CallbackParam): void;
-        getSecurityToken(callback: CallbackParam): void;
-        httpOverLWP(callback: CallbackParam): void;
+        lwp(param: CallbackParam): void;
+        getSecurityToken(param: CallbackParam): void;
+        httpOverLWP(param: CallbackParam): void;
     }
 
     interface InternalUser {
-        getRole(callback: CallbackParam): void;
-        isNewUser(callback: CallbackParam): void;
-        allOrganizations(callback: CallbackParam): void;
-        showMedalEntry(callback: CallbackParam): void;
+        getRole(param: CallbackParam): void;
+        isNewUser(param: CallbackParam): void;
+        allOrganizations(param: CallbackParam): void;
+        showMedalEntry(param: CallbackParam): void;
     }
 
     interface Microapp {
-        checkInstalled(callback: CallbackParam): void;
-        queryInfo(callback: CallbackParam): void;
-        triggerSync(callback: CallbackParam): void;
+        checkInstalled(param: CallbackParam): void;
+        queryInfo(param: CallbackParam): void;
+        triggerSync(param: CallbackParam): void;
     }
 
     interface Lwp {
-        call(callback: CallbackParam): void;
-        setSessionIdCookie(callback: CallbackParam): void;
+        call(param: CallbackParam): void;
+        setSessionIdCookie(param: CallbackParam): void;
     }
 
     interface Runtime {
@@ -357,24 +357,24 @@ declare namespace Dingtalk {
     }
 
     interface Monitor {
-        usability(callback: CallbackParam): void;
-        enableUsability(callback: CallbackParam): void;
-        finishLoad(callback: CallbackParam): void;
+        usability(param: CallbackParam): void;
+        enableUsability(param: CallbackParam): void;
+        finishLoad(param: CallbackParam): void;
     }
 
     interface Message {
-        post(callback: CallbackParam): void;
-        fetch(callback: CallbackParam): void;
+        post(param: CallbackParam): void;
+        fetch(param: CallbackParam): void;
     }
 
     interface Permission {
-        requestAuthCode(callback: CallbackParam): void;
-        requestJsApis(callback: CallbackParam): void;
-        requestOperateAuthCode(callback: CallbackParam): void;
+        requestAuthCode(param: CallbackParam): void;
+        requestJsApis(param: CallbackParam): void;
+        requestOperateAuthCode(param: CallbackParam): void;
     }
 
     interface Info {
-        status(callback: CallbackParam): void;
+        status(param: CallbackParam): void;
     }
 
     interface Ui {
@@ -389,58 +389,58 @@ declare namespace Dingtalk {
     }
 
     interface AppLink {
-        open(callback: CallbackParam): void;
-        request(callback: CallbackParam): void;
-        response(callback: CallbackParam): void;
-        fetch(callback: CallbackParam): void;
+        open(param: CallbackParam): void;
+        request(param: CallbackParam): void;
+        response(param: CallbackParam): void;
+        fetch(param: CallbackParam): void;
     }
 
     interface Tab {
-        init(callback: CallbackParam): void;
-        start(callback: CallbackParam): void;
-        config(callback: CallbackParam): void;
-        select(callback: CallbackParam): void;
-        add(callback: CallbackParam): void;
-        remove(callback: CallbackParam): void;
+        init(param: CallbackParam): void;
+        start(param: CallbackParam): void;
+        config(param: CallbackParam): void;
+        select(param: CallbackParam): void;
+        add(param: CallbackParam): void;
+        remove(param: CallbackParam): void;
     }
 
     interface Drawer {
-        init(callback: CallbackParam): void;
-        config(callback: CallbackParam): void;
-        enable(callback: CallbackParam): void;
-        disable(callback: CallbackParam): void;
-        open(callback: CallbackParam): void;
-        close(callback: CallbackParam): void;
+        init(param: CallbackParam): void;
+        config(param: CallbackParam): void;
+        enable(param: CallbackParam): void;
+        disable(param: CallbackParam): void;
+        open(param: CallbackParam): void;
+        close(param: CallbackParam): void;
     }
 
     interface Nav {
-        preload(callback: CallbackParam): void;
-        go(callback: CallbackParam): void;
-        recycle(callback: CallbackParam): void;
-        push(callback: CallbackParam): void;
-        pop(callback: CallbackParam): void;
-        quit(callback: CallbackParam): void;
-        close(callback: CallbackParam): void;
-        getCurrentId(callback: CallbackParam): void;
+        preload(param: CallbackParam): void;
+        go(param: CallbackParam): void;
+        recycle(param: CallbackParam): void;
+        push(param: CallbackParam): void;
+        pop(param: CallbackParam): void;
+        quit(param: CallbackParam): void;
+        close(param: CallbackParam): void;
+        getCurrentId(param: CallbackParam): void;
     }
 
     interface WebViewBounce {
-        enable(callback: CallbackParam): void;
-        disable(callback: CallbackParam): void;
+        enable(param: CallbackParam): void;
+        disable(param: CallbackParam): void;
     }
 
     interface PullToRefresh {
-        enable(callback: CallbackParam): void;
-        stop(callback: CallbackParam): void;
-        disable(callback: CallbackParam): void;
+        enable(param: CallbackParam): void;
+        stop(param: CallbackParam): void;
+        disable(param: CallbackParam): void;
     }
 
     interface ProgressBar {
-        setColors(callback: CallbackParam): void;
+        setColors(param: CallbackParam): void;
     }
 
     interface Input {
-        plain(callback: CallbackParam): void;
+        plain(param: CallbackParam): void;
     }
 
     interface Biz {
@@ -472,225 +472,263 @@ declare namespace Dingtalk {
     }
 
     interface Schedule {
-        create(callback: CallbackParam): void;
+        create(param: CallbackParam): void;
     }
 
     interface Zoloz {
-        zimIdentity(callback: CallbackParam): void;
-        download(callback: CallbackParam): void;
+        zimIdentity(param: CallbackParam): void;
+        download(param: CallbackParam): void;
     }
 
     interface Live {
-        listLiveRecords(callback: CallbackParam): void;
-        getLiveStatistics(callback: CallbackParam): void;
-        listLiveViewers(callback: CallbackParam): void;
-        nav2GroupAnchorList(callback: CallbackParam): void;
-        nav2PlayVideo(callback: CallbackParam): void;
-        showPlayer(callback: CallbackParam): void;
-        destroyPlayer(callback: CallbackParam): void;
-        initPlayer(callback: CallbackParam): void;
-        playerPlay(callback: CallbackParam): void;
-        playerPause(callback: CallbackParam): void;
-        hidePlayer(callback: CallbackParam): void;
+        listLiveRecords(param: CallbackParam): void;
+        getLiveStatistics(param: CallbackParam): void;
+        listLiveViewers(param: CallbackParam): void;
+        nav2GroupAnchorList(param: CallbackParam): void;
+        nav2PlayVideo(param: CallbackParam): void;
+        showPlayer(param: CallbackParam): void;
+        destroyPlayer(param: CallbackParam): void;
+        initPlayer(param: CallbackParam): void;
+        playerPlay(param: CallbackParam): void;
+        playerPause(param: CallbackParam): void;
+        hidePlayer(param: CallbackParam): void;
     }
 
     interface Oa {
-        setWorkTab(callback: CallbackParam): void;
-        authorityVerify(callback: CallbackParam): void;
+        setWorkTab(param: CallbackParam): void;
+        authorityVerify(param: CallbackParam): void;
     }
 
     interface FaceBox {
-        startCameraRecord(callback: CallbackParam): void;
-        startPictureRecord(callback: CallbackParam): void;
-        removeFace(callback: CallbackParam): void;
-        getRecognition(callback: CallbackParam): void;
-        setRecognition(callback: CallbackParam): void;
-        showRemind(callback: CallbackParam): void;
-        sendMessageToContact(callback: CallbackParam): void;
-        experienceFunction(callback: CallbackParam): void;
-        startCameraRecordFromPartner(callback: CallbackParam): void;
+        startCameraRecord(param: CallbackParam): void;
+        startPictureRecord(param: CallbackParam): void;
+        removeFace(param: CallbackParam): void;
+        getRecognition(param: CallbackParam): void;
+        setRecognition(param: CallbackParam): void;
+        showRemind(param: CallbackParam): void;
+        sendMessageToContact(param: CallbackParam): void;
+        experienceFunction(param: CallbackParam): void;
+        startCameraRecordFromPartner(param: CallbackParam): void;
     }
 
     interface Verify {
-        takePhoto(callback: CallbackParam): void;
-        biometric(callback: CallbackParam): void;
+        takePhoto(param: CallbackParam): void;
+        biometric(param: CallbackParam): void;
     }
 
     interface Calendar {
-        chooseOneDay(callback: CallbackParam): void;
-        chooseHalfDay(callback: CallbackParam): void;
-        chooseInterval(callback: CallbackParam): void;
-        chooseDateTime(callback: CallbackParam): void;
-        datePicker(callback: CallbackParam): void;
+        chooseOneDay(param: CallbackParam): void;
+        chooseHalfDay(param: CallbackParam): void;
+        chooseInterval(param: CallbackParam): void;
+        chooseDateTime(param: CallbackParam): void;
+        datePicker(param: CallbackParam): void;
     }
 
     interface MicroApp {
-        visualList(callback: CallbackParam): void;
+        visualList(param: CallbackParam): void;
     }
 
     interface Data {
-        getAvatar(callback: CallbackParam): void;
+        getAvatar(param: CallbackParam): void;
     }
 
     interface Redenvelop {
-        sendNormalRedEnvelop(callback: CallbackParam): void;
-        sendEnterpriseRedEnvelop(callback: CallbackParam): void;
+        sendNormalRedEnvelop(param: CallbackParam): void;
+        sendEnterpriseRedEnvelop(param: CallbackParam): void;
     }
 
     interface Auth {
-        requestAuthCode(callback: CallbackParam): void;
+        requestAuthCode(param: CallbackParam): void;
     }
 
     interface Alipay {
-        pay(callback: CallbackParam): void;
-        auth(callback: CallbackParam): void;
+        pay(param: CallbackParam): void;
+        auth(param: CallbackParam): void;
     }
 
     interface Notify {
-        send(callback: CallbackParam): void;
+        send(param: CallbackParam): void;
     }
 
     interface Intent {
-        fetchData(callback: CallbackParam): void;
+        fetchData(param: CallbackParam): void;
     }
 
     interface ClipboardData {
-        setData(callback: CallbackParam): void;
+        setData(param: CallbackParam): void;
     }
 
     interface Cspace {
-        preview(callback: CallbackParam): void;
-        saveFile(callback: CallbackParam): void;
-        chooseSpaceDir(callback: CallbackParam): void;
-        copy(callback: CallbackParam): void;
+        preview(param: CallbackParam): void;
+        saveFile(param: CallbackParam): void;
+        chooseSpaceDir(param: CallbackParam): void;
+        copy(param: CallbackParam): void;
     }
 
     interface CustomContact {
-        choose(callback: CallbackParam): void;
-        multipleChoose(callback: CallbackParam): void;
+        choose(param: CallbackParam): void;
+        multipleChoose(param: CallbackParam): void;
     }
 
     interface Map {
-        search(callback: CallbackParam): void;
-        locate(callback: CallbackParam): void;
-        view(callback: CallbackParam): void;
-        searchRoute(callback: CallbackParam): void;
+        search(param: CallbackParam): void;
+        locate(param: CallbackParam): void;
+        view(param: CallbackParam): void;
+        searchRoute(param: CallbackParam): void;
     }
 
     interface Contact {
-        createGroup(callback: CallbackParam): void;
-        choose(callback: CallbackParam): void;
-        complexChoose(callback: CallbackParam): void;
-        getMobileContact(callback: CallbackParam): void;
-        changeCustomerFollower(callback: CallbackParam): void;
-        complexPicker(callback: CallbackParam): void;
-        pickCustomer(callback: CallbackParam): void;
-        setRule(callback: CallbackParam): void;
-        departmentsPicker(callback: CallbackParam): void;
-        externalComplexPicker(callback: CallbackParam): void;
-        addFromManual(callback: CallbackParam): void;
-        addFromContact(callback: CallbackParam): void;
-        externalEditForm(callback: CallbackParam): void;
-        addUserForm(callback: CallbackParam): void;
-        chooseMobileContacts(callback: CallbackParam): void;
-        manageContactAlert(callback: CallbackParam): void;
-        complexSelectedPicker(callback: CallbackParam): void;
-        departmentsSelectedPicker(callback: CallbackParam): void;
-        pickJobTitle(callback: CallbackParam): void;
-        isForeignOrg(callback: CallbackParam): void;
-        addSubManager(callback: CallbackParam): void;
+        createGroup(param: CallbackParam): void;
+        choose(param: CallbackParam): void;
+        complexChoose(param: CallbackParam): void;
+        getMobileContact(param: CallbackParam): void;
+        changeCustomerFollower(param: CallbackParam): void;
+        complexPicker(param: CallbackParam): void;
+        pickCustomer(param: CallbackParam): void;
+        setRule(param: CallbackParam): void;
+        departmentsPicker(param: CallbackParam): void;
+        externalComplexPicker(param: CallbackParam): void;
+        addFromManual(param: CallbackParam): void;
+        addFromContact(param: CallbackParam): void;
+        externalEditForm(param: CallbackParam): void;
+        addUserForm(param: CallbackParam): void;
+        chooseMobileContacts(param: CallbackParam): void;
+        manageContactAlert(param: CallbackParam): void;
+        complexSelectedPicker(param: CallbackParam): void;
+        departmentsSelectedPicker(param: CallbackParam): void;
+        pickJobTitle(param: CallbackParam): void;
+        isForeignOrg(param: CallbackParam): void;
+        addSubManager(param: CallbackParam): void;
     }
 
     interface BizChat {
-        chooseConversation(callback: CallbackParam): void;
-        open(callback: CallbackParam): void;
-        getConversationInfo(callback: CallbackParam): void;
-        pickConversation(callback: CallbackParam): void;
-        chooseConversationByCorpId(callback: CallbackParam): void;
-        toConversation(callback: CallbackParam): void;
-        locationChatMessage(callback: CallbackParam): void;
-        openSingleChat(callback: CallbackParam): void;
-        addGroup(callback: CallbackParam): void;
-        createOrgPublicGroup(callback: CallbackParam): void;
-        modifyGroupDesc(callback: CallbackParam): void;
+        chooseConversation(param: CallbackParam): void;
+        open(param: CallbackParam): void;
+        getConversationInfo(param: CallbackParam): void;
+        pickConversation(param: CallbackParam): void;
+        chooseConversationByCorpId(param: CallbackParam): void;
+        toConversation(param: CallbackParam): void;
+        locationChatMessage(param: CallbackParam): void;
+        openSingleChat(param: CallbackParam): void;
+        addGroup(param: CallbackParam): void;
+        createOrgPublicGroup(param: CallbackParam): void;
+        modifyGroupDesc(param: CallbackParam): void;
     }
 
     interface BizTelephone {
-        call(callback: CallbackParam): void;
-        showCallMenu(callback: CallbackParam): void;
-        quickCall(callback: CallbackParam): void;
-        callOrgExternalContacts(callback: CallbackParam): void;
-        quickCallList(callback: CallbackParam): void;
-        checkBizCall(callback: CallbackParam): void;
+        call(param: CallbackParam): void;
+        showCallMenu(param: CallbackParam): void;
+        quickCall(param: CallbackParam): void;
+        callOrgExternalContacts(param: CallbackParam): void;
+        quickCallList(param: CallbackParam): void;
+        checkBizCall(param: CallbackParam): void;
     }
 
     interface Ding {
-        post(callback: CallbackParam): void;
-        create(callback: CallbackParam): void;
+        post(param: CallbackParam): void;
+        create(param: CallbackParam): void;
+    }
+
+    interface SetTitleParam extends CallbackParam {
+        /**"控制标题文本 空字符串表示显示默认文本" */
+        title: string;
     }
 
     interface Navigation {
-        setLeft(callback: CallbackParam): void;
-        setRight(callback: CallbackParam): void;
-        setTitle(callback: CallbackParam): void;
-        back(callback: CallbackParam): void;
-        replace(callback: CallbackParam): void;
-        createEditor(callback: CallbackParam): void;
-        finishEditor(callback: CallbackParam): void;
-        setIcon(callback: CallbackParam): void;
-        close(callback: CallbackParam): void;
-        goBack(callback: CallbackParam): void;
-        setMenu(callback: CallbackParam): void;
-        popGesture(callback: CallbackParam): void;
-        gestures(callback: CallbackParam): void;
-        setActions(callback: CallbackParam): void;
-        hideBar(callback: CallbackParam): void;
-        setPullGesture(callback: CallbackParam): void;
-        showPopdownList(callback: CallbackParam): void;
-        setSubtitle(callback: CallbackParam): void;
-        setTitleIcon(callback: CallbackParam): void;
+        setLeft(param: CallbackParam): void;
+        setRight(param: CallbackParam): void;
+        setTitle(param: SetTitleParam): void;
+        back(param: CallbackParam): void;
+        replace(param: CallbackParam): void;
+        createEditor(param: CallbackParam): void;
+        finishEditor(param: CallbackParam): void;
+        setIcon(param: CallbackParam): void;
+        close(param: CallbackParam): void;
+        goBack(param: CallbackParam): void;
+        setMenu(param: CallbackParam): void;
+        popGesture(param: CallbackParam): void;
+        gestures(param: CallbackParam): void;
+        setActions(param: CallbackParam): void;
+        hideBar(param: CallbackParam): void;
+        setPullGesture(param: CallbackParam): void;
+        showPopdownList(param: CallbackParam): void;
+        setSubtitle(param: CallbackParam): void;
+        setTitleIcon(param: CallbackParam): void;
+    }
+
+    interface GetUserParam extends CallbackParam {
+        corpId?: string;
+        onSuccess?: (user: UserInfo) => void;
+    }
+
+    interface UserInfo {
+        /**"用户头像地址" */
+        avatar: string;
+        /**"用户所在的企业Id" */
+        corpId: string;
+        /**"员工在企业内的UserID 企业用来唯一标识用户的字段 这个字段和你在文档看到的userId是一个id 抱歉 这个字段没有和其它接口统一命名" */
+        emplId: string;
+        /**"用户唯一标识ID 仅用于区分用户 这个Id是客户端加密的一个id 仅用于区分用户 不建议使用" */
+        id: string;
+        isAuth: boolean;
+        /**"是否是企业管理员" */
+        isManager: boolean;
+        /**用户自己设置的昵称 */
+        nick: string;
+        /**"用户名" */
+        nickName: string;
+        /**企业管理员设置的用户名称 */
+        orgUserName: string;
+        rightLevel: number;
     }
 
     interface User {
-        get(callback: CallbackParam): void;
-        secretID(callback: CallbackParam): void;
+        get(param: GetUserParam): void;
+        secretID(param: CallbackParam): void;
+    }
+
+
+    interface BizUtilScanParam extends CallbackParam {
+        /**'默认是all' */
+        type?: 'all' | 'qrCode' | 'barCode';
+        onSuccess?: (data?: { text: string }) => void;
     }
 
     interface BizUtil {
-        open(callback: CallbackParam): void;
-        openLink(callback: CallbackParam): void;
-        share(callback: CallbackParam): void;
-        ut(callback: CallbackParam): void;
-        datepicker(callback: CallbackParam): void;
-        timepicker(callback: CallbackParam): void;
-        uploadImage(callback: CallbackParam): void;
-        previewImage(callback: CallbackParam): void;
-        qrcode(callback: CallbackParam): void;
-        datetimepicker(callback: CallbackParam): void;
-        chosen(callback: CallbackParam): void;
-        scan(callback: CallbackParam): void;
-        uploadImageFromCamera(callback: CallbackParam): void;
-        pageClick(callback: CallbackParam): void;
-        uploadAttachment(callback: CallbackParam): void;
-        warn(callback: CallbackParam): void;
-        multiSelect(callback: CallbackParam): void;
-        presentWindow(callback: CallbackParam): void;
-        fetchImageData(callback: CallbackParam): void;
-        scanCard(callback: CallbackParam): void;
-        addDesktopShortcuts(callback: CallbackParam): void;
-        timestamp(callback: CallbackParam): void;
-        encrypt(callback: CallbackParam): void;
-        decrypt(callback: CallbackParam): void;
-        openFloatWindow(callback: CallbackParam): void;
-        vip(callback: CallbackParam): void;
-        recordVideoToUpload(callback: CallbackParam): void;
-        fetchFileData(callback: CallbackParam): void;
-        stickPage(callback: CallbackParam): void;
-        selectEmoji(callback: CallbackParam): void;
-        getLocaleAndNationByCorpId(callback: CallbackParam): void;
-        shareImage(callback: CallbackParam): void;
-        saveImage(callback: CallbackParam): void;
-        uploadMedia(callback: CallbackParam): void;
+        open(param: CallbackParam): void;
+        openLink(param: CallbackParam): void;
+        share(param: CallbackParam): void;
+        ut(param: CallbackParam): void;
+        datepicker(param: CallbackParam): void;
+        timepicker(param: CallbackParam): void;
+        uploadImage(param: CallbackParam): void;
+        previewImage(param: CallbackParam): void;
+        qrcode(param: CallbackParam): void;
+        datetimepicker(param: CallbackParam): void;
+        chosen(param: CallbackParam): void;
+        scan(param: BizUtilScanParam): void;
+        uploadImageFromCamera(param: CallbackParam): void;
+        pageClick(param: CallbackParam): void;
+        uploadAttachment(param: CallbackParam): void;
+        warn(param: CallbackParam): void;
+        multiSelect(param: CallbackParam): void;
+        presentWindow(param: CallbackParam): void;
+        fetchImageData(param: CallbackParam): void;
+        scanCard(param: CallbackParam): void;
+        addDesktopShortcuts(param: CallbackParam): void;
+        timestamp(param: CallbackParam): void;
+        encrypt(param: CallbackParam): void;
+        decrypt(param: CallbackParam): void;
+        openFloatWindow(param: CallbackParam): void;
+        vip(param: CallbackParam): void;
+        recordVideoToUpload(param: CallbackParam): void;
+        fetchFileData(param: CallbackParam): void;
+        stickPage(param: CallbackParam): void;
+        selectEmoji(param: CallbackParam): void;
+        getLocaleAndNationByCorpId(param: CallbackParam): void;
+        shareImage(param: CallbackParam): void;
+        saveImage(param: CallbackParam): void;
+        uploadMedia(param: CallbackParam): void;
     }
 
     interface Device {
@@ -708,92 +746,123 @@ declare namespace Dingtalk {
     }
 
     interface Screen {
-        rotateView(callback: CallbackParam): void;
-        resetView(callback: CallbackParam): void;
+        rotateView(param: CallbackParam): void;
+        resetView(param: CallbackParam): void;
     }
 
     interface Screenshot {
-        startMonitor(callback: CallbackParam): void;
-        stopMonitor(callback: CallbackParam): void;
+        startMonitor(param: CallbackParam): void;
+        stopMonitor(param: CallbackParam): void;
     }
 
     interface Health {
-        stepCount(callback: CallbackParam): void;
-        dayStepCount(callback: CallbackParam): void;
+        stepCount(param: CallbackParam): void;
+        dayStepCount(param: CallbackParam): void;
     }
 
     interface Nfc {
-        nfcRead(callback: CallbackParam): void;
-        nfcWrite(callback: CallbackParam): void;
+        nfcRead(param: CallbackParam): void;
+        nfcWrite(param: CallbackParam): void;
     }
 
     interface Audio {
-        download(callback: CallbackParam): void;
-        play(callback: CallbackParam): void;
-        onPlayEnd(callback: CallbackParam): void;
-        resume(callback: CallbackParam): void;
-        pause(callback: CallbackParam): void;
-        stop(callback: CallbackParam): void;
-        startRecord(callback: CallbackParam): void;
-        stopRecord(callback: CallbackParam): void;
-        onRecordEnd(callback: CallbackParam): void;
-        upload(callback: CallbackParam): void;
-        translateVoice(callback: CallbackParam): void;
+        download(param: CallbackParam): void;
+        play(param: CallbackParam): void;
+        onPlayEnd(param: CallbackParam): void;
+        resume(param: CallbackParam): void;
+        pause(param: CallbackParam): void;
+        stop(param: CallbackParam): void;
+        startRecord(param: CallbackParam): void;
+        stopRecord(param: CallbackParam): void;
+        onRecordEnd(param: CallbackParam): void;
+        upload(param: CallbackParam): void;
+        translateVoice(param: CallbackParam): void;
     }
 
     interface Launcher {
-        checkInstalledApps(callback: CallbackParam): void;
-        launchApp(callback: CallbackParam): void;
+        checkInstalledApps(param: CallbackParam): void;
+        launchApp(param: CallbackParam): void;
     }
 
     interface Base {
-        getUUID(callback: CallbackParam): void;
-        getInterface(callback: CallbackParam): void;
-        getSettings(callback: CallbackParam): void;
-        getScanWifiList(callback: CallbackParam): void;
-        getWifiStatus(callback: CallbackParam): void;
-        enableBluetooth(callback: CallbackParam): void;
-        enableLocation(callback: CallbackParam): void;
-        startBindDevice(callback: CallbackParam): void;
-        unBindDevice(callback: CallbackParam): void;
-        getScanWifiListAsync(callback: CallbackParam): void;
-        scanBleDevice(callback: CallbackParam): void;
-        stopScanBleDevice(callback: CallbackParam): void;
-        connectBleDevice(callback: CallbackParam): void;
-        disConnectBleDevice(callback: CallbackParam): void;
-        sendDataToDevice(callback: CallbackParam): void;
-        getPhoneInfo(callback: CallbackParam): void;
+        getUUID(param: CallbackParam): void;
+        getInterface(param: CallbackParam): void;
+        getSettings(param: CallbackParam): void;
+        getScanWifiList(param: CallbackParam): void;
+        getWifiStatus(param: CallbackParam): void;
+        enableBluetooth(param: CallbackParam): void;
+        enableLocation(param: CallbackParam): void;
+        startBindDevice(param: CallbackParam): void;
+        unBindDevice(param: CallbackParam): void;
+        getScanWifiListAsync(param: CallbackParam): void;
+        scanBleDevice(param: CallbackParam): void;
+        stopScanBleDevice(param: CallbackParam): void;
+        connectBleDevice(param: CallbackParam): void;
+        disConnectBleDevice(param: CallbackParam): void;
+        sendDataToDevice(param: CallbackParam): void;
+        getPhoneInfo(param: CallbackParam): void;
     }
 
     interface Connection {
-        getNetworkType(callback: CallbackParam): void;
+        getNetworkType(param: CallbackParam): void;
     }
 
     interface Geolocation {
-        get(callback: CallbackParam): void;
-        openGps(callback: CallbackParam): void;
-        start(callback: CallbackParam): void;
-        stop(callback: CallbackParam): void;
-        status(callback: CallbackParam): void;
-        isEnabled(callback: CallbackParam): void;
-        isEnabledHighAccuracy(callback: CallbackParam): void;
+        get(param: CallbackParam): void;
+        openGps(param: CallbackParam): void;
+        start(param: CallbackParam): void;
+        stop(param: CallbackParam): void;
+        status(param: CallbackParam): void;
+        isEnabled(param: CallbackParam): void;
+        isEnabledHighAccuracy(param: CallbackParam): void;
     }
 
     interface Accelerometer {
-        watchShake(callback: CallbackParam): void;
-        clearShake(callback: CallbackParam): void;
+        watchShake(param: CallbackParam): void;
+        clearShake(param: CallbackParam): void;
+    }
+
+    interface AlertParam extends CallbackParam {
+        message: string;
+        title?: string;
+    }
+
+    type ToastIconType = 'success' | 'error' | '';
+
+    interface ToastParam extends CallbackParam {
+        /**'icon样式 默认为空' */
+        icon?: ToastIconType;
+        /**"提示信息" */
+        text: string;
+        /**"显示持续时间 单位秒 默认按系统规范 android只有两种 <=2s >2s" */
+        duration: number;
+        /**"延迟显示 单位秒 默认0" */
+        delay?: number;
+    }
+
+    interface PromptParam extends CallbackParam {
+        title: string;
+        message?: string;
+        defaultText?: string;
+        buttonLabels: Array<string>;
+        onSuccess?: (res: {
+            /**'被点击按钮的索引值 从0开始' */
+            buttonIndex: number;
+            /**"输入的值" */
+            value: string
+        }) => void
     }
 
     interface Notification {
-        alert(callback: CallbackParam): void;
-        confirm(callback: CallbackParam): void;
-        prompt(callback: CallbackParam): void;
-        vibrate(callback: CallbackParam): void;
-        toast(callback: CallbackParam): void;
-        showPreloader(callback: CallbackParam): void;
-        hidePreloader(callback: CallbackParam): void;
-        actionSheet(callback: CallbackParam): void;
-        modal(callback: CallbackParam): void;
-        extendModal(callback: CallbackParam): void;
+        alert(param: AlertParam): void;
+        confirm(param: CallbackParam): void;
+        prompt(param: PromptParam): void;
+        vibrate(param: CallbackParam): void;
+        toast(param: ToastParam): void;
+        showPreloader(param: CallbackParam): void;
+        hidePreloader(param: CallbackParam): void;
+        actionSheet(param: CallbackParam): void;
+        modal(param: CallbackParam): void;
+        extendModal(param: CallbackParam): void;
     }
 }
