@@ -1,7 +1,9 @@
-src
+.circleci
 .gitignore
+api-list-plain.json
+api-list.json
+dist
+src
 tsconfig.json
 tslint.json
 typings.json
-api-list-plain.json
-api-list.json
