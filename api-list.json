@@ -505,6 +505,9 @@
         },
         "redpacket": {
             "nav2RedPacket": "红包组件"
+        },
+        "feeds": {
+            "playVideo": "播放视频"
         }
     },
     "util": {

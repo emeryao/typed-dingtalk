@@ -157,6 +157,11 @@ declare namespace Dingtalk {
         cspace: InternalCspace;
         safe: Safe;
         redpacket: Redpacket;
+        feeds: Feeds;
+    }
+
+    interface Feeds {
+        playVideo(param: CallbackParam): void;
     }
 
     interface Redpacket {
@@ -853,6 +858,16 @@ declare namespace Dingtalk {
         }) => void
     }
 
+    interface ActionSheetParam {
+        title?: string;
+        cancelButton?: string;
+        otherButtons?: Array<string>;
+        onSuccess?: (res: {
+            /**'被点击按钮的索引值 从0开始 取消按钮为-1' */
+            buttonIndex: number;
+        }) => void
+    }
+
     interface Notification {
         alert(param: AlertParam): void;
         confirm(param: CallbackParam): void;
@@ -861,7 +876,7 @@ declare namespace Dingtalk {
         toast(param: ToastParam): void;
         showPreloader(param: CallbackParam): void;
         hidePreloader(param: CallbackParam): void;
-        actionSheet(param: CallbackParam): void;
+        actionSheet(param: ActionSheetParam): void;
         modal(param: CallbackParam): void;
         extendModal(param: CallbackParam): void;
     }

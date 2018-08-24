@@ -2105,6 +2105,13 @@
         "ios": "4.3.0",
         "android": "4.3.0",
         "release": false
+    }, {
+        "namespace": "internal.feeds.playVideo",
+        "name": "播放视频",
+        "desc": "只限XXApp使用",
+        "ios": "4.3.0",
+        "android": "4.3.0",
+        "release": false
     }],
     "util": [{
         "namespace": "util.localStorage.getItem",

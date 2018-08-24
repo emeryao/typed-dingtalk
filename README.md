@@ -23,7 +23,7 @@
 
 ## About
 Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.q6PDir&treeId=171&articleId=106834&docType=1)  
-[`dingtalk.js`](https://g.alicdn.com/dingding/open-develop/2.2.5/dingtalk.js) Version `2.2.5`
+[`dingtalk.js`](https://g.alicdn.com/dingding/open-develop/2.3.0/dingtalk.js) Version `2.3.0`
 
 ### About the jsdoc comment
 * all Chinese punctuations in comments are removed
@@ -33,4 +33,4 @@ Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com
 * a comment has no quotes means it is written by myself
 
 ## Last Update
-`2018.04.28`
+`2018.08.24`

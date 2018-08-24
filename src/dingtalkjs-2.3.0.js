@@ -26,7 +26,7 @@
     }(window.__dd),
     function (e) {
         "use strict";
-        var a = "2.2.5",
+        var a = "2.3.0",
             n = {
                 device: [{
                     namespace: "device.notification.alert",
@@ -2185,6 +2185,13 @@
                 }, {
                     namespace: "internal.user.showMedalEntry",
                     name: "是否显示勋章入口",
+                    ios: "4.3.0",
+                    android: "4.3.0",
+                    release: !1
+                }, {
+                    namespace: "internal.feeds.playVideo",
+                    name: "播放视频",
+                    desc: "只限XXApp使用",
                     ios: "4.3.0",
                     android: "4.3.0",
                     release: !1
