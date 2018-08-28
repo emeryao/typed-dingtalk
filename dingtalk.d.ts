@@ -699,6 +699,16 @@ declare namespace Dingtalk {
         onSuccess?: (data?: { text: string }) => void;
     }
 
+    interface BizUtilMultiSelectParam extends CallbackParam {
+        /**"待选项列表" */
+        options: Array<string>;
+        /**"已选选项列表" */
+        selectOption: Array<string>;
+        onSuccess?: (
+            /**"返回用户选中的index数组 从0开始" */
+            res?: Array<number>) => void;
+    }
+
     interface BizUtil {
         open(param: CallbackParam): void;
         openLink(param: CallbackParam): void;
@@ -716,7 +726,7 @@ declare namespace Dingtalk {
         pageClick(param: CallbackParam): void;
         uploadAttachment(param: CallbackParam): void;
         warn(param: CallbackParam): void;
-        multiSelect(param: CallbackParam): void;
+        multiSelect(param: BizUtilMultiSelectParam): void;
         presentWindow(param: CallbackParam): void;
         fetchImageData(param: CallbackParam): void;
         scanCard(param: CallbackParam): void;
@@ -868,11 +878,16 @@ declare namespace Dingtalk {
         }) => void
     }
 
+    interface VibrateParam extends CallbackParam {
+        /**"震动时间 android可配置 iOS忽略" */
+        druation?: number;
+    }
+
     interface Notification {
         alert(param: AlertParam): void;
         confirm(param: CallbackParam): void;
         prompt(param: PromptParam): void;
-        vibrate(param: CallbackParam): void;
+        vibrate(param: VibrateParam): void;
         toast(param: ToastParam): void;
         showPreloader(param: CallbackParam): void;
         hidePreloader(param: CallbackParam): void;

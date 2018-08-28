@@ -5,6 +5,10 @@
 
 [![CircleCI](https://circleci.com/gh/Emeryao/typed-dingtalk.svg?style=svg)](https://circleci.com/gh/Emeryao/typed-dingtalk)
 
+[![PR Welcome](https://img.shields.io/badge/PR-welcome-blue.svg?longCache=true&style=for-the-badge)](https://github.com/Emeryao/typed-dingtalk/pulls)
+![npm type definitions](https://img.shields.io/npm/types/chalk.svg?style=for-the-badge)
+
+
 ## Install
 
 * With [`npm`](https://www.npmjs.com/) installed  
@@ -26,11 +30,11 @@ Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com
 [`dingtalk.js`](https://g.alicdn.com/dingding/open-develop/2.3.0/dingtalk.js) Version `2.3.0`
 
 ### About the jsdoc comment
-* all Chinese punctuations in comments are removed
+* all Chinese punctuations in comments have been removed
 * a comment quoted by `"` means it is directly copy/paste from the official documentaion
 * a comment quoted by `'` means it is copied from the official documentation and had been modified
     > a common scenario is removing some useless messages like `"the type is number blablabla"`
 * a comment has no quotes means it is written by myself
 
 ## Last Update
-`2018.08.24`
+`2018.08.28`
