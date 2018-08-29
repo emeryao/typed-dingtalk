@@ -25,6 +25,20 @@
 
 * Or get the declaration file [here](./dingtalk.d.ts) and include it to your project
 
+* for **`Angular`**  
+    projects created with `ng new` have a `./src/tsconfig.app.json` with default content 
+    ```json
+    {
+        "extends": "../tsconfig.json",
+        "compilerOptions": {
+            "outDir": "../out-tsc/app",
+            "types": []
+        },
+        "exclude": []
+    }
+    ```
+    the line of `"types":[]` should be **remove** to make the declaration file work
+
 ## About
 Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.q6PDir&treeId=171&articleId=106834&docType=1)  
 [`dingtalk.js`](https://g.alicdn.com/dingding/open-develop/2.3.0/dingtalk.js) Version `2.3.0`
