@@ -37,7 +37,7 @@
         "exclude": []
     }
     ```
-    the line of `"types":[]` should be **remove** to make the declaration file work
+    the line of `"types":[]` should be **removed** to make the declaration file work
 
 ## About
 Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com/docs/doc.htm?spm=a219a.7629140.0.0.q6PDir&treeId=171&articleId=106834&docType=1)  
