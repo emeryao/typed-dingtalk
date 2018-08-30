@@ -1,13 +1,11 @@
 # typed-dingtalk
 [TypeScript](http://www.typescriptlang.org) declaration file for Dingtalk jsapi 
 
-[![NPM](https://nodei.co/npm/typed-dingtalk.png?downloads=true&stars=true)](https://nodei.co/npm/typed-dingtalk/)
-
-[![CircleCI](https://circleci.com/gh/Emeryao/typed-dingtalk.svg?style=svg)](https://circleci.com/gh/Emeryao/typed-dingtalk)
+[![npm](https://img.shields.io/npm/v/typed-dingtalk.svg?style=for-the-badge)](https://www.npmjs.com/package/typed-dingtalk)
+[![CircleCI branch](https://img.shields.io/circleci/project/github/Emeryao/typed-dingtalk/master.svg?style=for-the-badge)](https://circleci.com/gh/Emeryao/typed-dingtalk)
 
 [![PR Welcome](https://img.shields.io/badge/PR-welcome-blue.svg?longCache=true&style=for-the-badge)](https://github.com/Emeryao/typed-dingtalk/pulls)
 ![npm type definitions](https://img.shields.io/npm/types/chalk.svg?style=for-the-badge)
-
 
 ## Install
 
@@ -25,8 +23,8 @@
 
 * Or get the declaration file [here](./dingtalk.d.ts) and include it to your project
 
-* for **`Angular`**  
-    projects created with `ng new` have a `./src/tsconfig.app.json` with default content 
+* for **[`Angular`](https://angular.io)**  
+    projects created with `ng new` have a `./src/tsconfig.app.json` with default content
     ```json
     {
         "extends": "../tsconfig.json",
@@ -51,4 +49,4 @@ Based on the official Dingtalk API [documentation](https://open-doc.dingtalk.com
 * a comment has no quotes means it is written by myself
 
 ## Last Update
-`2018.08.28`
+`2018.08.30 UTC+08:00`
