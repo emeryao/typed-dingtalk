@@ -883,14 +883,21 @@ declare namespace Dingtalk {
         druation?: number;
     }
 
+    interface ShowPreLoaderParam {
+        /**loading显示的字符 空表示不显示文字 */
+        text?: string;
+        /**是否显示icon 默认true Android无此参数 */
+        showIcon?: boolean;
+    }
+
     interface Notification {
         alert(param: AlertParam): void;
         confirm(param: CallbackParam): void;
         prompt(param: PromptParam): void;
         vibrate(param: VibrateParam): void;
         toast(param: ToastParam): void;
-        showPreloader(param: CallbackParam): void;
-        hidePreloader(param: CallbackParam): void;
+        showPreloader(param?: ShowPreLoaderParam): void;
+        hidePreloader(param?: CallbackParam): void;
         actionSheet(param: ActionSheetParam): void;
         modal(param: CallbackParam): void;
         extendModal(param: CallbackParam): void;
